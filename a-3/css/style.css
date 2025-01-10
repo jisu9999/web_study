@@ -236,14 +236,14 @@ li {
   justify-content: space-between;
   width: 1200px;
   height: 100px;
-  background-color: steelblue;
+  /* background-color: steelblue; */
 }
 /* ft-logo */
 .ft-logo {
   width: 200px;
   height: 100%;
   padding: 10px;
-  background-color: wheat;
+  /* background-color: wheat; */
 }
 .ft-logo a {
   line-height: 100px;
@@ -264,20 +264,28 @@ li {
   margin: auto;
   line-height: 50px;
   padding: 10px 0;
-  background-color: rgb(210, 203, 255);
 }
 .bottom_menu li {
+  position: relative;
   width: calc(100% / 3);
   text-align: center;
   line-height: 30px;
-  border-right: 1px solid #999;
+  /* border-right: 1px solid #999; */
 }
-.bottom_menu li:last-child {
+.bottom_menu li::after {
+  content: "";
+  border: 1px solid red;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  right: 0;
+}
+.bottom_menu li:last-child::after {
   border: none;
 }
 .ft-copy p {
   width: 100%;
   line-height: 50px;
   text-align: center;
-  background-color: turquoise;
 }
