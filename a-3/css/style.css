@@ -14,6 +14,34 @@ li {
   list-style: none;
 }
 /* 모달창 */
+#modal {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  z-index: 999999;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  /* 높이값이 정해져있으면 내용이 추가됐을때 튕겨나간다 */
+  /* height: 300px; */
+  padding: 30px;
+  background-color: #fff;
+}
+.modal-title {
+  margin-bottom: 20px;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 70px;
+}
 /* 전체영역 */
 .wrap {
   width: 1200px;
@@ -74,9 +102,9 @@ li {
 /* .gnb:hover .depth2 {
   display: block;
 } */
-.gnb > li:hover .depth2 {
+/* .gnb > li:hover .depth2 {
   display: block;
-}
+} */
 /* 서브메뉴 */
 .depth2 {
   background-color: rgb(159, 207, 255);
@@ -195,11 +223,13 @@ li {
   /* background-color: blue; */
 }
 /* 갤러리 */
-.gal {
-  width: calc(100% - 20px);
+.gal li {
+  float: left;
+  margin-right: 20px;
+  /* width: calc(100% - 20px);
   display: flex;
   justify-content: space-between;
-  background-color: aquamarine;
+  background-color: aquamarine; */
 }
 /* 배너 */
 .c2,
